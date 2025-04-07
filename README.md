@@ -81,7 +81,13 @@ curl -X POST http://localhost:3000/auth/login   -H "Content-Type: application/js
 curl http://localhost:3000/user/profile   -H "Authorization: Bearer <your_jwt_token>"
 ```
 
-### 4. Update User Profile (Protected)
+### 4. List All Campaigns
+
+```bash
+curl http://localhost:3000/campaigns
+```
+
+### 5.### 4. Update User Profile (Protected)
 
 ```bash
 curl -X PUT http://localhost:3000/user/profile   -H "Authorization: Bearer <your_jwt_token>" -d '{ "name": "Ravi Kumar Singh", "bio": "Volunteer, coder, and tree hugger"}'
@@ -107,30 +113,16 @@ curl -X POST http://localhost:3000/campaigns/<campaignId>/join   -H "Authorizati
 ### 8. Leave a Campaign (Protected)
 
 ```bash
-curl -X POST http://localhost:3000/campaigns/<campaignId>/leave   -H "Authorization: Bearer <your_jwt_token>"
-```
-
----
+curl -X POST http://localhost:30
 
 ## Authentication E2E Tests
 
 This project includes end-to-end (E2E) tests for verifying the `/api/auth/login` endpoint using **NestJS**, **Supertest**, and **Mongoose**.
 
+### File Location
 
-### How to Run
-
-Make sure you’ve seeded a test user (see below), then run the E2E tests using:
-
-```bash
-npm run test:e2e
-```
----
-
-## Folder Structure
-
-```
-src/
-├── auth/         # Authentication (register, login, JWT strategy)
+00/campaigns/<campaignId>/leave   -H "Authorization: Bearer <your_jwt_token>"
+JWT strategy)
 ├── user/         # User model, service, controller
 ├── campaigns/    # Campaign model, controller, join logic
 ├── app.module.ts # main module
