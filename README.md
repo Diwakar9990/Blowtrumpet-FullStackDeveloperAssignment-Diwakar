@@ -84,7 +84,7 @@ curl http://localhost:3000/user/profile   -H "Authorization: Bearer <your_jwt_to
 ### 4. Update User Profile (Protected)
 
 ```bash
-curl -X POST http://localhost:3000/user/profile   -H "Authorization: Bearer <your_jwt_token>"
+curl -X POST http://localhost:3000/user/profile   -H "Authorization: Bearer <your_jwt_token>" -d '{ "name": "Ravi Kumar Singh", "bio": "Volunteer, coder, and tree hugger"}'
 ```
 
 ### 5. List All Campaigns
