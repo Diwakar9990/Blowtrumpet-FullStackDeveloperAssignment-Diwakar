@@ -113,15 +113,23 @@ curl -X POST http://localhost:3000/campaigns/<campaignId>/join   -H "Authorizati
 ### 8. Leave a Campaign (Protected)
 
 ```bash
-curl -X POST http://localhost:30
+curl -X POST http://localhost:3000/campaigns/<campaignId>/leave   -H "Authorization: Bearer <your_jwt_token>"
+```
 
-## Authentication E2E Tests
+### 🚀 How to Run
 
-This project includes end-to-end (E2E) tests for verifying the `/api/auth/login` endpoint using **NestJS**, **Supertest**, and **Mongoose**.
+Make sure you’ve seeded a test user (see below), then run the E2E tests using:
+
+```bash
+npm run test:e2e
+# or
+yarn test:e2e
+```
 
 ### File Location
 
-00/campaigns/<campaignId>/leave   -H "Authorization: Bearer <your_jwt_token>"
+
+```
 JWT strategy)
 ├── user/         # User model, service, controller
 ├── campaigns/    # Campaign model, controller, join logic
