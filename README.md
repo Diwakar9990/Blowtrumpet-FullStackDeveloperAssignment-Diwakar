@@ -112,7 +112,17 @@ curl -X POST http://localhost:3000/campaigns/<campaignId>/leave   -H "Authorizat
 
 ---
 
-## Folder Structure
+## Authentication E2E Tests
+
+This project includes end-to-end (E2E) tests for verifying the `/api/auth/login` endpoint using **NestJS**, **Supertest**, and **Mongoose**.
+
+
+### How to Run
+
+Make sure you’ve seeded a test user (see below), then run the E2E tests using:
+
+```bash
+npm run test:e2e
 
 ```
 src/
