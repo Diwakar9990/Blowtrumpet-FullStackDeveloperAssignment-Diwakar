@@ -124,9 +124,7 @@ Make sure you’ve seeded a test user (see below), then run the E2E tests using:
 ```bash
 npm run test:e2e
 
-
-
-
+---
 
 ## Folder Structure
 
