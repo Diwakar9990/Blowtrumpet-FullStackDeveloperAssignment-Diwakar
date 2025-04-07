@@ -81,16 +81,33 @@ curl -X POST http://localhost:3000/auth/login   -H "Content-Type: application/js
 curl http://localhost:3000/user/profile   -H "Authorization: Bearer <your_jwt_token>"
 ```
 
-### 4. List All Campaigns
+### 4. Update User Profile (Protected)
+
+```bash
+curl -X POST http://localhost:3000/user/profile   -H "Authorization: Bearer <your_jwt_token>"
+```
+
+### 5. List All Campaigns
 
 ```bash
 curl http://localhost:3000/campaigns
 ```
 
-### 5. Join a Campaign (Protected)
+### 6. Get Campaign by Id
+
+```bash
+curl http://localhost:3000/campaigns/<campaignId>
+```
+
+### 7. Join a Campaign (Protected)
 
 ```bash
 curl -X POST http://localhost:3000/campaigns/<campaignId>/join   -H "Authorization: Bearer <your_jwt_token>"
+```
+### 8. Leave a Campaign (Protected)
+
+```bash
+curl -X POST http://localhost:3000/campaigns/<campaignId>/leave   -H "Authorization: Bearer <your_jwt_token>"
 ```
 
 ---
